@@ -1,0 +1,6 @@
+data/raw/
+data/silver/
+data/gold/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
