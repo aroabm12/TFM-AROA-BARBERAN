@@ -1,5 +1,3 @@
-# TFM-AROA-BARBERAN
-
 # TFM: Lista de la compra ajustada a un objetivo nutricional (Mercadona)
 
 Herramienta pensada para ayudar a hacer la compra en Mercadona según un objetivo nutricional (por ejemplo, una dieta alta en proteína). Este repositorio contiene, por ahora, la preparación de datos: desde la descarga hasta una tabla final lista para usar.
