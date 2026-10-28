@@ -1,0 +1,111 @@
+{
+  "id": "5000",
+  "ean": "8410084041110",
+  "slug": "arroz-redondo-fallera-paquete",
+  "brand": "La Fallera",
+  "limit": 999,
+  "badges": {
+    "is_water": false,
+    "requires_age_check": false
+  },
+  "origin": null,
+  "photos": [
+    {
+      "zoom": "https://prod-mercadona.imgix.net/images/3d5a3a0f0c7a9b8e1a6503dbe5be466d.jpg?fit=crop&h=3600&w=3600",
+      "regular": "https://prod-mercadona.imgix.net/images/3d5a3a0f0c7a9b8e1a6503dbe5be466d.jpg?fit=crop&h=600&w=600",
+      "thumbnail": "https://prod-mercadona.imgix.net/images/3d5a3a0f0c7a9b8e1a6503dbe5be466d.jpg?fit=crop&h=300&w=300",
+      "perspective": 2
+    },
+    {
+      "zoom": "https://prod-mercadona.imgix.net/images/beee4fd4fe7d42b2089755cf024ec1ff.jpg?fit=crop&h=3600&w=3600",
+      "regular": "https://prod-mercadona.imgix.net/images/beee4fd4fe7d42b2089755cf024ec1ff.jpg?fit=crop&h=600&w=600",
+      "thumbnail": "https://prod-mercadona.imgix.net/images/beee4fd4fe7d42b2089755cf024ec1ff.jpg?fit=crop&h=300&w=300",
+      "perspective": 9
+    }
+  ],
+  "status": null,
+  "details": {
+    "brand": "La Fallera",
+    "origin": null,
+    "suppliers": [
+      {
+        "name": "Fallera Nutrición, S.L.U."
+      }
+    ],
+    "legal_name": "Arroz grano redondo",
+    "description": "Arroz redondo La Fallera",
+    "counter_info": null,
+    "danger_mentions": "",
+    "alcohol_by_volume": null,
+    "mandatory_mentions": "Categoría I",
+    "production_variant": "",
+    "usage_instructions": "Tiempo de cocción 16 min aproximadamente",
+    "storage_instructions": "Conservar en lugar fresco y seco"
+  },
+  "is_bulk": false,
+  "packaging": "Paquete",
+  "published": true,
+  "share_url": "https://tienda.mercadona.es/product/5000/arroz-redondo-fallera-paquete",
+  "thumbnail": "https://prod-mercadona.imgix.net/images/3d5a3a0f0c7a9b8e1a6503dbe5be466d.jpg?fit=crop&h=300&w=300",
+  "categories": [
+    {
+      "id": 13,
+      "name": "Arroz, legumbres y pasta",
+      "level": 0,
+      "order": 10,
+      "categories": [
+        {
+          "id": 118,
+          "name": "Arroz",
+          "level": 1,
+          "order": 10,
+          "categories": [
+            {
+              "id": 441,
+              "name": "Arroz",
+              "level": 2,
+              "order": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extra_info": [
+    null
+  ],
+  "display_name": "Arroz redondo La Fallera",
+  "unavailable_from": null,
+  "is_variable_weight": false,
+  "price_instructions": {
+    "iva": 4,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.69",
+    "unit_price": "1.69",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.690",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+  },
+  "unavailable_weekdays": [],
+  "nutrition_information": {
+    "allergens": " <strong>x99</strong>.",
+    "ingredients": "<p>100% Arroz"
+  },
+  "is_new_arrival": false,
+  "color_variants": null
+}

@@ -1,0 +1,116 @@
+{
+  "id": "5044",
+  "ean": "8480000050441",
+  "slug": "arroz-redondo-hacendado-paquete",
+  "brand": "Hacendado",
+  "limit": 999,
+  "badges": {
+    "is_water": false,
+    "requires_age_check": false
+  },
+  "origin": null,
+  "photos": [
+    {
+      "zoom": "https://prod-mercadona.imgix.net/images/0daf43fb5761b823ce83c985930c97c9.jpg?fit=crop&h=3600&w=3600",
+      "regular": "https://prod-mercadona.imgix.net/images/0daf43fb5761b823ce83c985930c97c9.jpg?fit=crop&h=600&w=600",
+      "thumbnail": "https://prod-mercadona.imgix.net/images/0daf43fb5761b823ce83c985930c97c9.jpg?fit=crop&h=300&w=300",
+      "perspective": 2
+    },
+    {
+      "zoom": "https://prod-mercadona.imgix.net/images/f5c65ae93a8814c6bbdbcf39a329810c.jpg?fit=crop&h=3600&w=3600",
+      "regular": "https://prod-mercadona.imgix.net/images/f5c65ae93a8814c6bbdbcf39a329810c.jpg?fit=crop&h=600&w=600",
+      "thumbnail": "https://prod-mercadona.imgix.net/images/f5c65ae93a8814c6bbdbcf39a329810c.jpg?fit=crop&h=300&w=300",
+      "perspective": 9
+    }
+  ],
+  "status": null,
+  "details": {
+    "brand": "Hacendado",
+    "origin": null,
+    "suppliers": [
+      {
+        "name": "Arrocerías Pons,  SAU"
+      },
+      {
+        "name": "Arrocerías Pons, S.A."
+      }
+    ],
+    "legal_name": "Arroz Redondo",
+    "description": "Arroz redondo Hacendado",
+    "counter_info": null,
+    "danger_mentions": "",
+    "alcohol_by_volume": null,
+    "mandatory_mentions": "",
+    "production_variant": "",
+    "usage_instructions": "Tiempo de cocción: 15-20 minutos aproximadamente. Añadir 2 partes de agua por cada una de arroz.",
+    "storage_instructions": "Proteger de fuentes de humedad y calor. Una vez abierto, se aconseja mantenerlo en un recipiente cerrado.",
+    "is_prepared_by_mercadona": false
+  },
+  "is_bulk": false,
+  "packaging": "Paquete",
+  "published": true,
+  "share_url": "https://tienda.mercadona.es/product/5044/arroz-redondo-hacendado-paquete",
+  "thumbnail": "https://prod-mercadona.imgix.net/images/0daf43fb5761b823ce83c985930c97c9.jpg?fit=crop&h=300&w=300",
+  "categories": [
+    {
+      "id": 13,
+      "name": "Arroz, legumbres y pasta",
+      "level": 0,
+      "order": 10,
+      "categories": [
+        {
+          "id": 118,
+          "name": "Arroz",
+          "level": 1,
+          "order": 10,
+          "categories": [
+            {
+              "id": 441,
+              "name": "Arroz",
+              "level": 2,
+              "order": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extra_info": [
+    null
+  ],
+  "display_name": "Arroz redondo Hacendado",
+  "main_feature": null,
+  "unavailable_from": null,
+  "is_variable_weight": false,
+  "price_instructions": {
+    "iva": null,
+    "is_new": false,
+    "is_pack": false,
+    "pack_size": null,
+    "unit_name": null,
+    "unit_size": 1.0,
+    "bulk_price": "1.15",
+    "unit_price": "1.15",
+    "approx_size": false,
+    "size_format": "kg",
+    "total_units": null,
+    "unit_selector": true,
+    "bunch_selector": false,
+    "drained_weight": null,
+    "selling_method": 0,
+    "tax_percentage": "4.000",
+    "price_decreased": false,
+    "reference_price": "1.150",
+    "min_bunch_amount": 1.0,
+    "reference_format": "kg",
+    "previous_unit_price": null,
+    "increment_bunch_amount": 1.0
+  },
+  "unavailable_weekdays": [],
+  "nutrition_information": {
+    "allergens": " <strong>x99</strong>.",
+    "ingredients": "Arroz"
+  },
+  "is_new_arrival": false,
+  "color_variants": null
+}
