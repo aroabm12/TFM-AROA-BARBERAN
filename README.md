@@ -5,7 +5,7 @@ Herramienta pensada para ayudar a hacer la compra en Mercadona según un objetiv
 ## Qué hay en el repositorio
 
 - `pipeline_bronze_silver_gold.ipynb`: el proceso completo, con explicaciones, de los datos en bruto a la tabla final.
-- `entregas/`: documentos de cada entrega (`01_ideas_producto.md`, `02_datos_y_preparacion.md`).
+- `docs/entregas/`: documentos de cada entrega (`01_ideas_producto.md`, `02_datos_y_preparacion.md`).
 - `data/sample/`: una muestra pequeña de los datos (3 productos en bruto, 10 filas de la tabla final y la fecha de descarga).
 - `requirements.txt`: librerías necesarias.
 
@@ -26,4 +26,4 @@ El notebook crea las carpetas `data/raw`, `data/silver` y `data/gold`. Esas carp
 
 **Datos personales.** Ninguna de las dos fuentes contiene datos personales.
 
-Más detalle en `entregas/02_datos_y_preparacion.md`.
+Más detalle en `docs/entregas/02_datos_y_preparacion.md`.
