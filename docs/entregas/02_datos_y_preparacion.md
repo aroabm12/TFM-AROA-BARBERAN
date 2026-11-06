@@ -69,7 +69,7 @@ Uso dos fuentes y las cruzo por el código de barras (EAN), nunca por el nombre 
 ### De Bronze a Silver
 1. Quito los productos repetidos (uno puede aparecer en dos categorías).
 2. Extraigo de las fichas de Open Food Facts calorías, proteína, grasa, hidratos, fibra, azúcares y sal por 100 g.
-3. Añado el precio de referencia, el tamaño y el formato desde la ficha de Mercadona.
+3. Añado el precio de referencia, el tamaño y el formato desde la ficha de Mercadona. Convierto los precios, que llegan como texto, a números, y compruebo que todos están en euros por kg.
 4. Marco los productos que tienen los cuatro macros completos y los que tienen un código de barras con 13 dígitos (hay uno de 12).
 5. **Compruebo la coherencia de las calorías.** Como Open Food Facts lo rellena cualquier persona, no doy los datos por buenos sin más. Calculo las calorías a partir de los nutrientes (4 por gramo de proteína, 4 por gramo de hidratos, 9 por gramo de grasa y 2 por gramo de fibra) y las comparo con las que declara la ficha. Con una regla simple del 10 % salían muchas falsas alarmas, porque muchas fichas no traen fibra y la fibra solo puede sumar calorías. Por eso clasifico cada producto en cuatro grupos:
 
@@ -81,7 +81,7 @@ Uso dos fuentes y las cruzo por el código de barras (EAN), nunca por el nombre 
 | sin_datos | 16 | Faltan los valores (11 no están en Open Food Facts y 5 están con datos vacíos) |
 
 Comprobé a mano las etiquetas de los dos productos incoherentes (arroz cocido redondo Sabroz y quinoa cocida Sabroz): en los dos casos el dato de Open Food Facts estaba mal.
-Convierto los precios, que llegan como texto, a números, y compruebo que todos están en euros por kg.
+
 
 6. **Clasifico el estado del producto** (seco, cocinado, fresco o instantáneo) a partir del nombre, y compruebo que las calorías por 100 g de cada grupo quedan en rangos separados.
 
@@ -98,6 +98,7 @@ Convierto los precios, que llegan como texto, a números, y compruebo que todos 
 - Calidad: `estado_calidad`.
 
 La siguiente fase usará esta tabla para recomendar qué productos incluir en la compra según el objetivo nutricional del usuario, por ejemplo, llegar a una cantidad de proteína diaria dentro de un presupuesto.
+
 ---
 
 ## 5. Riesgos y limitaciones
