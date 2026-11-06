@@ -36,7 +36,7 @@ Uso dos fuentes y las cruzo por el código de barras (EAN), nunca por el nombre 
 - **Acceso:** no hay una API pública y documentada. Utilizo la misma API interna que usa su tienda online (`tienda.mercadona.es/api/...`), con el almacén de Valencia (`wh=vlc1`). El catálogo y los precios pueden depender del almacén.
 - **Cobertura:** descargué las tres categorías completas: 88 productos. Los 88 tienen EAN y precio de referencia en euros por kg.
 - **Actualización y estabilidad:** el catálogo cambia con el tiempo. Lo comprobé yo misma: en una primera descarga la categoría de arroces tenía 15 productos y en una segunda tenía 14, porque un producto desapareció. Además, al no ser una API oficial, Mercadona puede cambiarla o bloquearla sin avisar. Por eso guardo la fecha de descarga y conservo los datos en bruto.
-- **Alternativa si falla:** repetir la descarga a mano con otra herramienta es poco práctico. La alternativa realista sería partir de una muestra guardada (la del repositorio) y construir el catálogo con una descarga puntual.
+- **Alternativa si falla:** trabajar con el último catálogo descargado, que el notebook conserva en bruto en local, y buscar esos productos directamente en Open Food Facts, que tiene fichas de marcas como Hacendado.
 
 ### Open Food Facts (valores nutricionales por 100 g)
 - **Acceso:** API pública (`world.openfoodfacts.org/api/v2/product/<ean>`), que se consulta por código de barras. Pide identificarse con un `User-Agent` y limita las peticiones.
@@ -54,6 +54,7 @@ Uso dos fuentes y las cruzo por el código de barras (EAN), nunca por el nombre 
 **Mercadona.** Sus términos y condiciones indican que el contenido de la web está protegido por propiedad intelectual e industrial, que la información solo puede usarse con fines personales, que el uso comercial está prohibido sin autorización previa y que no se puede copiar ni reproducir sin su consentimiento por escrito. No mencionan expresamente el uso de robots ni la extracción automatizada de datos, y la API que utilizo no es oficial. Por eso lo planteo como un uso académico y limitado: descargo solo tres categorías, con una pausa de un segundo entre peticiones, y no publico el catálogo. En el repositorio solo hay una muestra mínima (3 productos en bruto y 10 filas de la tabla final), y los datos completos se regeneran ejecutando el notebook. No se puede dar un uso comercial al producto sin pedir autorización a Mercadona.
 
 **Open Food Facts.** Su base de datos está bajo la licencia Open Database License (ODbL). Los datos nutricionales de este trabajo contienen información de Open Food Facts (https://world.openfoodfacts.org), disponible bajo esa licencia (https://opendatacommons.org/licenses/odbl/1-0/). La licencia tiene dos condiciones: citar la fuente y compartir en abierto, bajo la misma licencia, las bases de datos derivadas que se publiquen. Si se combinan con otra base de datos, solo se pueden combinar con fuentes que permitan esa redistribución, y los términos de Mercadona no la permiten. Por eso no publico la tabla completa, que mezcla las dos fuentes, y dejo en el repositorio solo una muestra pequeña. Además, la API exige identificarse con un User-Agent propio y limita las peticiones, y mi código lo cumple.
+
 
 ---
 
@@ -80,6 +81,7 @@ Uso dos fuentes y las cruzo por el código de barras (EAN), nunca por el nombre 
 | sin_datos | 16 | Faltan los valores (11 no están en Open Food Facts y 5 están con datos vacíos) |
 
 Comprobé a mano las etiquetas de los dos productos incoherentes (arroz cocido redondo Sabroz y quinoa cocida Sabroz): en los dos casos el dato de Open Food Facts estaba mal.
+Convierto los precios, que llegan como texto, a números, y compruebo que todos están en euros por kg.
 
 6. **Clasifico el estado del producto** (seco, cocinado, fresco o instantáneo) a partir del nombre, y compruebo que las calorías por 100 g de cada grupo quedan en rangos separados.
 
@@ -88,12 +90,19 @@ Comprobé a mano las etiquetas de los dos productos incoherentes (arroz cocido r
 - Renombro las columnas con nombres claros y añado tres columnas calculadas: gramos de proteína por euro, calorías por euro y porcentaje de las calorías que viene de la proteína.
 - El reparto por estado en el Gold es: 48 secos, 9 cocinados, 9 frescos y 4 instantáneos.
 
+**Qué significa el Gold y para qué se usa.** Cada fila es un producto de Mercadona con datos utilizables (70 en esta versión). Las columnas principales son:
+- Identificación: `product_id`, `ean`, `nombre`, `categoria_id`, `formato` y `estado` (seco, cocinado, fresco o instantáneo).
+- Precio: `precio_unidad`, `precio_referencia` (en euros por kg) y `tamano_envase`.
+- Nutrición por 100 g: `kcal_100g`, `proteina_100g`, `grasa_100g`, `hidratos_100g`, `fibra_100g`, `azucares_100g` y `sal_100g`.
+- Calculadas: `proteina_g_por_euro`, `kcal_por_euro` y `pct_kcal_proteina`.
+- Calidad: `estado_calidad`.
+
+La siguiente fase usará esta tabla para recomendar qué productos incluir en la compra según el objetivo nutricional del usuario, por ejemplo, llegar a una cantidad de proteína diaria dentro de un presupuesto.
 ---
 
 ## 5. Riesgos y limitaciones
 
-- **Calidad de los datos nutricionales:** Open Food Facts lo rellena cualquier persona y puede tener errores. Mi comprobación solo detecta los que afectan a las calorías, así que no puedo asegurar que los 64 productos "coherentes" estén todos bien. Además, el estado del producto (seco, cocinado...) se deduce del nombre y puede fallar con productos nuevos; los 4 productos instantáneos tienen calorías muy bajas para ser fideos secos y no he podido confirmar por qué.
-- **Cobertura incompleta:** 11 de los 88 productos (el 12 %) no están en Open Food Facts, todos de Hacendado, la marca más habitual, y quedan fuera de la tabla final.
-- **Muestra limitada:** los resultados son de tres categorías de productos envasados y no se pueden generalizar a todo el supermercado. La fruta, la verdura y la carne a granel quedan para una segunda fase.
-- **Fuente no oficial y cambiante:** Mercadona puede cambiar o cerrar la API, y su catálogo cambia con el tiempo, así que una nueva ejecución puede dar un número de productos distinto.
-- **Licencias:** los términos de Mercadona restringen el uso de su información a fines personales, y Open Food Facts exige compartir en abierto los datos derivados. Por eso solo publico una muestra pequeña, y un uso comercial del producto exigiría la autorización de Mercadona.
+- **Dato que me falta:** Mercadona no publica calorías ni macronutrientes, y 11 de los 88 productos (todos de Hacendado) no están en Open Food Facts, así que quedan fuera del Gold. Tampoco cubro fruta, verdura ni carne a granel.
+- **Sesgo y límites:** trabajo solo con tres categorías de productos envasados. Los datos de Open Food Facts los rellena cualquier persona, y mi control solo detecta errores en las calorías. Además, el estado del producto (seco, cocinado...) lo deduzco del nombre.
+- **Fuente no oficial y condiciones de uso:** la API de Mercadona puede cambiar o cerrarse, su catálogo varía con el tiempo y sus términos y la licencia de Open Food Facts limitan lo que puedo publicar, por eso solo subo una muestra.
+- **Si una fuente principal dejase de estar disponible:** si falla Mercadona, trabajaría con el último catálogo descargado y buscaría esos productos en Open Food Facts. Si falla Open Food Facts, leería las etiquetas de los productos (foto y lectura automática del texto) o usaría una tabla de composición de alimentos.
