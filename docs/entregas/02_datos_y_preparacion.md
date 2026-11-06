@@ -62,9 +62,9 @@ Uso dos fuentes y las cruzo por el código de barras (EAN), nunca por el nombre 
 
 | Capa | Qué contiene | Dónde está |
 |---|---|---|
-| **Bronze** | Los datos tal cual los devuelven las dos webs: una ficha de categoría y una ficha de producto de Mercadona, y una ficha de Open Food Facts por cada código de barras. No se modifica nada. | `data/raw/` (no se sube completa; en el repositorio hay una muestra en `data/sample/`) |
-| **Silver** | Los datos limpios y unidos, con marcas de calidad. 88 productos. | `data/silver/productos_silver.csv` |
-| **Gold** | La tabla final: una fila por producto utilizable. 70 productos y 20 columnas. | `data/gold/productos_gold.csv` |
+| **Bronze** | Los datos tal cual los devuelven las dos webs: una ficha de categoría y una ficha de producto de Mercadona, y una ficha de Open Food Facts por cada código de barras. No se modifica nada. | `data/raw/` (se genera al ejecutar el notebook; no se sube completa, y en el repositorio hay una muestra en `data/sample/raw/`) |
+| **Silver** | Los datos limpios y unidos, con marcas de calidad. 88 productos. | `data/silver/productos_silver.csv` (se genera al ejecutar el notebook; no se sube) |
+| **Gold** | La tabla final: una fila por producto utilizable. 70 productos y 20 columnas. | `data/gold/productos_gold.csv` (se genera al ejecutar el notebook; no se sube, y hay una muestra de 10 filas en `data/sample/gold_muestra.csv`) |
 
 ### De Bronze a Silver
 1. Quito los productos repetidos (uno puede aparecer en dos categorías).
@@ -103,7 +103,7 @@ La siguiente fase usará esta tabla para recomendar qué productos incluir en la
 
 ## 5. Riesgos y limitaciones
 
-- **Dato que me falta:** Mercadona no publica calorías ni macronutrientes, y 11 de los 88 productos (todos de Hacendado) no están en Open Food Facts, así que quedan fuera del Gold. Tampoco cubro fruta, verdura ni carne a granel.
-- **Sesgo y límites:** trabajo solo con tres categorías de productos envasados. Los datos de Open Food Facts los rellena cualquier persona, y mi control solo detecta errores en las calorías. Además, el estado del producto (seco, cocinado...) lo deduzco del nombre.
-- **Fuente no oficial y condiciones de uso:** la API de Mercadona puede cambiar o cerrarse, su catálogo varía con el tiempo y sus términos y la licencia de Open Food Facts limitan lo que puedo publicar, por eso solo subo una muestra.
-- **Si una fuente principal dejase de estar disponible:** si falla Mercadona, trabajaría con el último catálogo descargado y buscaría esos productos en Open Food Facts. Si falla Open Food Facts, leería las etiquetas de los productos (foto y lectura automática del texto) o usaría una tabla de composición de alimentos.
+- **Dato que me falta:** Mercadona no publica macronutrientes, y 11 de los 88 productos (todos de Hacendado) no están en Open Food Facts, así que no entran en el Gold.
+- **Sesgo y límites:** solo cubro tres categorías de productos envasados, y los datos de Open Food Facts son colaborativos: mi control solo detecta errores en las calorías.
+- **Fuente no oficial:** la API de Mercadona puede cambiar o cerrarse, y sus condiciones de uso me limitan a publicar solo una muestra.
+- **Si una fuente principal fallara:** sin Mercadona, trabajaría con el último catálogo descargado y buscaría los productos en Open Food Facts; sin Open Food Facts, leería las etiquetas de los productos (foto y lectura automática del texto).
