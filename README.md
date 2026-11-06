@@ -13,7 +13,7 @@ Herramienta pensada para ayudar a hacer la compra en Mercadona según un objetiv
 
 1. Instala las librerías: `pip install -r requirements.txt`
 2. Abre `pipeline_bronze_silver_gold.ipynb` con Jupyter o VS Code.
-3. Cambia el texto del `User-Agent` de la celda 2 por tu nombre o email (Open Food Facts lo pide).
+3. Cambia el texto del `User-Agent` en la primera celda de código (la línea `headers = ...`) por tu nombre o email (Open Food Facts lo pide).
 4. Ejecuta todas las celdas de arriba abajo. Tarda unos minutos, porque hace pausas entre peticiones.
 
 El notebook crea las carpetas `data/raw`, `data/silver` y `data/gold`. Esas carpetas no se suben al repositorio (ver licencias), así que se generan al ejecutarlo. El catálogo de Mercadona cambia con el tiempo, por lo que el número de productos puede variar un poco.
