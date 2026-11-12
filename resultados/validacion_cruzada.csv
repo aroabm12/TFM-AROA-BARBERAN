@@ -1,0 +1,12 @@
+,MAE_cv_media,MAE_cv_desv
+Baseline + corrección Ridge (alpha=3),2.96,0.2
+Baseline + corrección Ridge (alpha=10),2.99,0.18
+Baseline + corrección Ridge (alpha=1),3.04,0.19
+Baseline + corrección Ridge (alpha=30),3.08,0.18
+Baseline (media por categoría),3.2,0.21
+Ridge (alpha=1),3.24,0.22
+Baseline + corrección Ridge (alpha=0.3),3.25,0.12
+Ridge (alpha=3),3.29,0.26
+Ridge (alpha=0.3),3.4,0.09
+Ridge (alpha=10),3.62,0.26
+Ridge (alpha=30),4.13,0.29

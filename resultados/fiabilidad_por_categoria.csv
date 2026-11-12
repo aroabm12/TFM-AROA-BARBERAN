@@ -1,0 +1,43 @@
+categoria_id,error_medio_g,productos,categoria,fiable
+104,0.26,7,Yogures naturales,False
+90,0.32,11,Mermelada y miel,True
+126,0.41,14,Tomate,True
+44,0.8,16,Hamburguesas,True
+80,0.92,44,Galletas,True
+77,0.92,5,Huevos,False
+127,0.95,28,Conservas verdura y fruta,True
+49,1.3,7,Chopped y mortadela,False
+116,1.4,12,"Mayonesa, ketchup y mostaza",True
+75,1.4,16,Mantequilla y margarina,True
+65,1.41,6,Bollería de horno,False
+64,1.44,20,Picos y rosquilletas,True
+135,1.6,23,Aceitunas y encurtidos,True
+60,1.6,34,Pan de molde,True
+66,1.87,24,Bollería envasada,True
+54,2.01,6,Queso curado,False
+52,2.04,18,Bacón y salchichas,True
+138,2.16,39,Pizzas,True
+111,2.25,17,Gelatina y postres,True
+50,2.46,10,Jamón serrano,True
+118,2.47,9,Arroz,True
+92,2.86,61,Chocolate,True
+123,2.9,8,Berberechos y mejillones,True
+78,2.96,32,Cereales,True
+58,3.01,12,Paté y sobrasada,True
+62,3.08,18,Pan tostado y rallado,True
+120,3.15,42,Pasta,True
+103,3.34,9,Yogures desnatados,True
+110,3.46,6,Flan y natillas,False
+122,3.74,21,Atún y conservas pescado,True
+53,3.92,34,Queso untable y fresco,True
+48,3.95,29,Aves y jamón cocido,True
+142,4.02,19,Platos fríos,False
+140,4.16,32,Platos calientes,False
+51,4.38,24,Embutido curado,False
+79,4.73,8,Tortitas,False
+56,4.76,18,Queso lonchas y rallado,False
+117,5.16,27,Otras salsas,False
+109,6.14,6,Yogures griegos,False
+133,7.72,35,Frutos secos,False
+132,9.42,29,Patatas fritas y snacks,False
+121,9.96,13,Legumbres,False

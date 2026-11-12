@@ -1,0 +1,4 @@
+modelo,MAE,RMSE,R2,pct_error_<2g,MAE_cv_media,MAE_cv_desv
+Baseline (media por categoría),3.39,5.14,0.6,48.13,3.2,0.21
+Ridge,3.41,4.91,0.64,42.25,3.24,0.22
+Random Forest,3.67,5.76,0.5,48.13,3.64,0.37
