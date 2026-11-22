@@ -1,0 +1,5 @@
+ean,nombre,estado,precio_unidad,precio_referencia,kcal_100g,proteina_100g,proteina_g_por_euro
+0000000000011,Arroz redondo de ejemplo,seco,1.2,1.2,350,7.0,58.3
+0000000000028,Lenteja de ejemplo,seco,1.9,1.9,330,24.0,126.3
+0000000000035,Pasta de ejemplo,seco,0.9,1.8,360,12.5,69.4
+0000000000042,Fideos instantáneos de ejemplo,instantaneo,1.1,4.4,140,4.0,

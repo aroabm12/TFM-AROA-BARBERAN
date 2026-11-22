@@ -9,7 +9,7 @@ Herramienta pensada para ayudar a hacer la compra en Mercadona según un objetiv
 - `experimento_ml.ipynb`: el experimento de Machine Learning de la entrega 3 (baseline, modelos, validación, errores y salida para el producto).
 - `docs/entregas/`: documentos de cada entrega (`01_ideas_producto.md`, `02_datos_y_preparacion.md`, `03_machine_learning.md`).
 - `resultados/`: métricas de los modelos, validación cruzada y fiabilidad por categoría (solo cifras agregadas, sin datos de productos).
-- `data/sample/`: una muestra pequeña de los datos de la entrega 2 (3 productos en bruto, 10 filas de la tabla final y la fecha real de descarga).
+- `data/sample/`: una muestra inventada (no son datos reales de Mercadona) para enseñar cómo se cruzan los precios y la nutrición por código de barras.
 - `data/manual/correcciones_manuales.csv`: las correcciones manuales que hice tras comprobar etiquetas, con el motivo y la fuente de cada una.
 - `requirements.txt`: librerías necesarias.
 
@@ -25,7 +25,7 @@ Los notebooks crean las carpetas `data/raw`, `data/silver` y `data/gold`. Esas c
 
 ## Fuentes de datos y licencias
 
-**Mercadona.** Catálogo, precios, tamaños y códigos de barras, obtenidos de la API interna de su tienda online (https://tienda.mercadona.es). No es una API oficial y no tengo autorización de Mercadona. Sus términos limitan el uso de la información a fines personales y no permiten copiarla ni reproducirla sin consentimiento por escrito. Uso los datos solo con fines académicos y publico únicamente una muestra mínima (incluidas las pocas filas de ejemplo que se ven en las salidas de los notebooks), que retiraría si me lo pidieran. Los datos descargados, el Gold ampliado y las estimaciones por producto tampoco se suben al repositorio.
+**Mercadona.** Catálogo, precios, tamaños y códigos de barras, obtenidos de la API interna de su tienda online (https://tienda.mercadona.es). No es una API oficial y no tengo autorización de Mercadona. Sus términos limitan el uso de la información a fines personales y no permiten copiarla ni reproducirla sin consentimiento por escrito. Uso los datos solo con fines académicos y no publico datos reales de Mercadona: la muestra de `data/sample/` es inventada. Las pocas filas reales que se ven en las salidas de los notebooks las retiraría si me lo pidieran. Los datos descargados, el Gold ampliado y las estimaciones por producto tampoco se suben al repositorio.
 
 **Open Food Facts.** Los datos nutricionales contienen información de Open Food Facts (https://world.openfoodfacts.org), disponible bajo la licencia Open Database License (ODbL, https://opendatacommons.org/licenses/odbl/1-0/). Se cruzan con Mercadona por código de barras.
 
