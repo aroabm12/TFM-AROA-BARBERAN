@@ -9,4 +9,4 @@ Baseline + corrección Ridge (alpha=0.3),3.25,0.12
 Ridge (alpha=3),3.29,0.26
 Ridge (alpha=0.3),3.4,0.09
 Ridge (alpha=10),3.62,0.26
-Ridge (alpha=30),4.13,0.29
+Ridge (alpha=30),4.13,0.28

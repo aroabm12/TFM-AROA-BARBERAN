@@ -1,0 +1,4 @@
+modelo,MAE,RMSE,R2,pct_error_<2g
+Baseline (media por categoría),4.26,6.0,0.01,44.55
+Ridge,4.21,5.32,0.22,33.66
+Random Forest,3.36,4.56,0.43,45.54
