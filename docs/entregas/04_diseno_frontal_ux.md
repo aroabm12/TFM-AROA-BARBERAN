@@ -123,7 +123,7 @@ Estas son las decisiones de diseño que he tomado y por qué.
 - **Si una categoría se queda sin productos compatibles,** se indica claramente ("no hay productos compatibles en esta categoría con tus respuestas") en vez de dejarla vacía.
 - **Valores límite en la meta.** El deslizador solo permite cifras razonables (por ejemplo, de 60 a 220 g de proteína al día) para evitar entradas absurdas.
 
-## ## 5. Continuidad hacia el MVP final
+## 5. Continuidad hacia el MVP final
 
 ### Qué implementaré en el MVP funcional (9 de diciembre)
 
