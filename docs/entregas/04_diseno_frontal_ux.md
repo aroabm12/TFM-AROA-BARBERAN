@@ -30,7 +30,7 @@ La persona entra y responde a una pregunta por pantalla. Al final recibe su comp
 | 1. Objetivo | Déficit calórico, alta en proteína, baja en grasa, ganar músculo, mantener peso o comer más sano | La siguiente pregunta, adaptada al objetivo |
 | 2. Su meta | Un dato que cambia según el objetivo (ver tabla de abajo) | Su meta diaria, que puede calcularse con su peso si no la sabe |
 | 3. Comidas y días | Comidas al día (3, 4 o 5) y días de compra | El número total de comidas que hay que cubrir |
-| 4. Exclusiones | Tipo de dieta, alergias o intolerancias y alimentos que no le gustan | La garantía de que no verá productos excluidos |
+| 4. Exclusiones | Tipo de dieta, alergias o intolerancias y alimentos que no le gustan | Una compra filtrada según la información disponible, con un aviso para comprobar la etiqueta |
 | 5. Su compra | Nada, solo revisar | La compra por categorías con raciones, el total en euros y el porcentaje del objetivo cubierto |
 
 La pregunta del paso 2 depende del objetivo elegido:
@@ -118,7 +118,7 @@ Estas son las decisiones de diseño que he tomado y por qué.
 
 - **Las estimaciones se ven siempre.** Un producto cuya proteína no está en Open Food Facts lleva la etiqueta "proteína estimada", y el total de proteína de la semana se escribe con "≈". En la ficha se explica de dónde sale el número ("la media de su categoría") y su rango habitual, con el error típico de 2 a 2,5 g por 100 g que medí con etiquetas reales.
 - **No se inventan números.** Si un producto pertenece a un grupo donde mi regla no es fiable (menos de 8 productos de comparación o error de validación cruzada mayor de 4 g), no se le muestra proteína y no cuenta para el total.
-- **Las exclusiones mandan.** Si la persona marca una alergia o intolerancia y de un producto no tengo información de ingredientes, no se lo ofrezco. Aun así, la herramienta avisa de que conviene revisar la etiqueta, porque los datos de ingredientes no son infalibles.
+- **Las exclusiones filtran, pero no prometen nada.** Si la persona marca una alergia o intolerancia y de un producto no tengo información de ingredientes, no se lo ofrezco. Aun así, en el paso 4 hay un aviso junto a la lista: "filtramos según la información disponible. Si tienes una alergia o intolerancia, comprueba la etiqueta del envase antes de comprar". Los datos de ingredientes no son infalibles, así que la herramienta nunca habla de garantía, solo de filtros aplicados.
 - **Si la compra no llega al objetivo,** por ejemplo porque las exclusiones dejan pocas opciones, se muestra el porcentaje real cubierto y un aviso con lo que falta, en lugar de fingir que llega.
 - **Si una categoría se queda sin productos compatibles,** se indica claramente ("no hay productos compatibles en esta categoría con tus respuestas") en vez de dejarla vacía.
 - **Valores límite en la meta.** El deslizador solo permite cifras razonables (por ejemplo, de 60 a 220 g de proteína al día) para evitar entradas absurdas.
