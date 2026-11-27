@@ -123,7 +123,7 @@ Estas son las decisiones de diseño que he tomado y por qué.
 - **Si una categoría se queda sin productos compatibles,** se indica claramente ("no hay productos compatibles en esta categoría con tus respuestas") en vez de dejarla vacía.
 - **Valores límite en la meta.** El deslizador solo permite cifras razonables (por ejemplo, de 60 a 220 g de proteína al día) para evitar entradas absurdas.
 
-## 5. Continuidad hacia el MVP final
+## ## 5. Continuidad hacia el MVP final
 
 ### Qué implementaré en el MVP funcional (9 de diciembre)
 
@@ -133,29 +133,32 @@ Estas son las decisiones de diseño que he tomado y por qué.
 - **Lista para el súper** con casillas para marcar lo comprado.
 - **Aviso de resultado incierto:** etiqueta "proteína estimada" y "≈" en el total cuando haya estimaciones.
 
+### Qué haré después, según el tiempo que quede
+
+Una vez que el MVP básico funcione, estas son las ideas que quiero añadir, por este orden:
+
+1. **Compra para dos personas**, que es la versión sencilla de los perfiles: cada persona con su meta y sus exclusiones.
+2. **Cambiar un producto** por otro equivalente de la misma categoría.
+
 ### Qué dejo como mejora futura
 
-| Idea | Por qué no entra en el MVP |
-|---|---|
-| Mi semana (reparto de comidas por día) | Necesita reglas adicionales para combinar productos en comidas concretas |
-| Cambiar un producto por otro equivalente | Hay que definir cuándo dos productos son equivalentes |
-| Perfiles y compra para dos personas | Multiplica las reglas de exclusiones y de raciones |
-| Escáner de código de barras | Depende de una cámara y de enlazar cada código con mis datos |
+- **Mi semana:** repartir la compra en comidas por día. Necesita reglas adicionales para combinar productos.
+- **Escáner de código de barras:** depende de la cámara y de enlazar cada código con mis datos.
 
-Las he dibujado en la Figura 10 para enseñar hacia dónde podría crecer la herramienta, pero no las voy a programar para el MVP.
+Las pantallas de estas ideas están dibujadas en la Figura 10 para enseñar hacia dónde podría crecer la herramienta.
 
 ### Cómo conecta la interfaz con los datos y el modelo
 
-- **Datos:** la aplicación leerá la tabla Gold ampliada de la entrega 3, con los 269 productos, su precio, su categoría y su estado.
-- **Proteína:** usará el dato de Open Food Facts cuando exista. En los 115 productos que no lo tienen aplicará la estimación por categoría y estado, y solo cuando la regla cumpla mi criterio de fiabilidad (al menos 8 productos de comparación y error de validación cruzada de 4 g o menos). Si no cumple, el producto no muestra proteína y no suma en el total.
+- **Datos:** la aplicación leerá el Gold ampliado de la entrega 3, con 1037 productos de 43 subcategorías, con su precio, su categoría y su estado.
+- **Proteína:** usará el dato de Open Food Facts cuando exista. Los productos sin ese dato (269 de los 1373 que descargué) no están en el Gold. A 115 de ellos les doy una estimación por categoría y estado, y solo cuando la regla cumple mi criterio de fiabilidad (al menos 8 productos de comparación y error de validación cruzada de 4 g o menos). Los otros 154 no se ofrecen, y el total de proteína nunca incluye un producto sin dato ni estimación.
 - **Selección de la compra:** será un algoritmo basado en reglas (objetivo, meta, comidas y días, exclusiones y presupuesto). No usaré IA generativa.
-- **Cosas que todavía tengo que construir:**
-  - Una tabla hecha a mano con las raciones y si es congelable, por categoría.
+- **Lo que tengo que construir para el MVP:**
+  - Una tabla hecha a mano con las raciones y si es congelable, para todas las categorías.
   - La extracción de alérgenos e ingredientes de los datos de Open Food Facts que ya tengo descargados, que ahora mismo no están en la tabla Silver.
   - Una regla de seguridad: a quien declare una alergia o intolerancia no le ofreceré productos de los que no tenga información de ingredientes.
 - **Tecnología:** pienso programar la aplicación con Streamlit, porque permite montar un asistente por pasos en Python reutilizando los notebooks y las tablas que ya tengo.
 
 ### Riesgos que veo
 
-- Si no me da tiempo a construir la tabla de raciones para todas las categorías, el MVP cubrirá solo las más importantes.
 - Los datos de alérgenos de Open Food Facts no son infalibles, por eso la aplicación avisará de que conviene revisar siempre la etiqueta.
+- Con exclusiones muy estrictas (por ejemplo, vegano y alérgico a varios alimentos) algunas categorías pueden quedarse con pocas opciones. En ese caso la aplicación lo dirá claramente en lugar de rellenar con productos que no encajan.

@@ -1,13 +1,13 @@
 # TFM: Lista de la compra ajustada a un objetivo nutricional (Mercadona)
 
-Herramienta pensada para ayudar a hacer la compra en Mercadona según un objetivo nutricional (por ejemplo, una dieta alta en proteína). Este repositorio contiene, por ahora, la preparación de datos (entrega 2) y un primer experimento de Machine Learning para estimar la proteína de los productos que no tienen datos nutricionales (entrega 3).
+Herramienta pensada para ayudar a hacer la compra en Mercadona según un objetivo nutricional (por ejemplo, una dieta alta en proteína). Este repositorio contiene, por ahora, la preparación de datos (entrega 2), un primer experimento de Machine Learning para estimar la proteína de los productos que no tienen datos nutricionales (entrega 3) y el diseño del frontal con sus mockups (entrega 4).
 
 ## Qué hay en el repositorio
 
 - `pipeline_bronze_silver_gold.ipynb`: el proceso completo de la entrega 2, con explicaciones, de los datos en bruto a la tabla final (3 categorías: arroz, legumbres y pasta).
 - `pipeline_ampliado.ipynb`: el mismo proceso ejecutado sobre 43 subcategorías de alimentos envasados, para tener datos suficientes para entrenar y validar un modelo (entrega 3). Incluye el registro de la fecha real de cada descarga, el tratamiento de los productos en litros y los instantáneos (fuera del ranking por euro) y la preparación de un test nuevo con productos que el modelo no ha visto.
 - `experimento_ml.ipynb`: el experimento de Machine Learning de la entrega 3: baseline, modelos, validación, rango de error, test nuevo, comprobación con etiquetas reales de productos sin datos y regla final por categoría y estado.
-- `docs/entregas/`: documentos de cada entrega (`01_ideas_producto.md`, `02_datos_y_preparacion.md`, `03_machine_learning.md`).
+- `docs/entregas/`: documentos de cada entrega (`01_ideas_producto.md`, `02_datos_y_preparacion.md`, `03_machine_learning.md`, `04_diseno_frontal_ux.md`). Las imágenes de los mockups y el logo de la entrega 4 están en `docs/entregas/img/`.
 - `resultados/`: métricas de los modelos, validación cruzada, test nuevo y fiabilidad por categoría y por categoría y estado (solo cifras agregadas, sin datos de productos).
 - `data/sample/`: una muestra inventada (no son datos reales de Mercadona) para enseñar cómo se cruzan los precios y la nutrición por código de barras.
 - `data/manual/correcciones_manuales.csv`: las correcciones manuales que hice tras comprobar etiquetas, con el motivo y la fuente de cada una.
@@ -33,4 +33,4 @@ Los notebooks crean las carpetas `data/raw`, `data/silver` y `data/gold`. Esas c
 
 **Datos personales.** Ninguna de las dos fuentes contiene datos personales.
 
-Más detalle en `docs/entregas/02_datos_y_preparacion.md` y `docs/entregas/03_machine_learning.md`.
+Más detalle en `docs/entregas/02_datos_y_preparacion.md`, `docs/entregas/03_machine_learning.md` y `docs/entregas/04_diseno_frontal_ux.md`.
